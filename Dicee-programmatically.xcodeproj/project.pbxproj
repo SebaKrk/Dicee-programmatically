@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93232C77258B58B2007CFB2B /* DiceRoll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 93232C76258B58B2007CFB2B /* DiceRoll.mp3 */; };
 		936F9E632589F58C007C0D44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936F9E622589F58C007C0D44 /* AppDelegate.swift */; };
 		936F9E652589F58C007C0D44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936F9E642589F58C007C0D44 /* SceneDelegate.swift */; };
 		936F9E6C2589F58E007C0D44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 936F9E6B2589F58E007C0D44 /* Assets.xcassets */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93232C76258B58B2007CFB2B /* DiceRoll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = DiceRoll.mp3; path = ../../../../../../Downloads/DiceRoll.mp3; sourceTree = "<group>"; };
+		93232C7A258B58B7007CFB2B /* DiceRoll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = DiceRoll.mp3; sourceTree = "<group>"; };
 		936F9E5F2589F58C007C0D44 /* Dicee-programmatically.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dicee-programmatically.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		936F9E622589F58C007C0D44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936F9E642589F58C007C0D44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +40,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		93232C79258B58B7007CFB2B /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				93232C7A258B58B7007CFB2B /* DiceRoll.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		936F9E562589F58C007C0D44 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +74,8 @@
 				936F9E6B2589F58E007C0D44 /* Assets.xcassets */,
 				936F9E6D2589F58E007C0D44 /* LaunchScreen.storyboard */,
 				936F9E702589F58E007C0D44 /* Info.plist */,
+				93232C79258B58B7007CFB2B /* Sounds */,
+				93232C76258B58B2007CFB2B /* DiceRoll.mp3 */,
 			);
 			path = "Dicee-programmatically";
 			sourceTree = "<group>";
@@ -126,6 +139,7 @@
 			files = (
 				936F9E6F2589F58E007C0D44 /* LaunchScreen.storyboard in Resources */,
 				936F9E6C2589F58E007C0D44 /* Assets.xcassets in Resources */,
+				93232C77258B58B2007CFB2B /* DiceRoll.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

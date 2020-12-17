@@ -6,16 +6,18 @@
 //
 
 import UIKit
+import AVFoundation
 
 class DiceView: UIView {
-
+    
+    var player: AVAudioPlayer!
+    
     let topContainerView = UIView()
     let centerContainerView = UIView()
     let bottomContainerView = UIView()
     
     var logoImage : UIImageView = {
         let image = UIImageView(image: #imageLiteral(resourceName: "diceeLogo"))
-//        image.backgroundColor = .white
         image.contentMode = .scaleAspectFit
         
         return image
@@ -23,7 +25,6 @@ class DiceView: UIView {
     
     let firstDiceImage : UIImageView = {
         let image = UIImageView(image: #imageLiteral(resourceName: "dice1"))
-//        image.backgroundColor = .red
         image.contentMode = .scaleAspectFit
         
         return image
@@ -31,7 +32,6 @@ class DiceView: UIView {
     
     let secondDiceImage : UIImageView = {
         let image = UIImageView(image: #imageLiteral(resourceName: "dice2"))
-//        image.backgroundColor = .blue
         image.contentMode = .scaleAspectFit
         
         return image
@@ -47,32 +47,51 @@ class DiceView: UIView {
         return button
     }()
     
-//    MARK: - OBJC func
+    //    MARK: - OBJC func
     
     @objc func handleButton() {
-        print("Roll")
-        let diceArray = [#imageLiteral(resourceName: "dice1"),#imageLiteral(resourceName: "dice2"),#imageLiteral(resourceName: "dice3"),#imageLiteral(resourceName: "dice4"),#imageLiteral(resourceName: "dice5"),#imageLiteral(resourceName: "dice6")]
         
-        firstDiceImage.image = diceArray.randomElement()
-        secondDiceImage.image = diceArray.randomElement()
+        playSound()
+        firstDiceImage.alpha = 0.5
+        secondDiceImage.alpha = 0.5
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+            let diceArray = [#imageLiteral(resourceName: "dice1"),#imageLiteral(resourceName: "dice2"),#imageLiteral(resourceName: "dice3"),#imageLiteral(resourceName: "dice4"),#imageLiteral(resourceName: "dice5"),#imageLiteral(resourceName: "dice6")]
+            
+            self.firstDiceImage.alpha = 1
+            self.secondDiceImage.alpha = 1
+            self.firstDiceImage.image = diceArray.randomElement()
+            self.secondDiceImage.image = diceArray.randomElement()
+        }
+       
     }
     
-//    MARK: INIT
+    //    MARK: INIT
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         configureViewComponents()
-    
+        
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Sounds
+    
+    func playSound() {
+        let sound = "DiceRoll"
+        let url = Bundle.main.url(forResource: sound, withExtension: "mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
+    }
+    
+    
+    //    MARK: - ViewComponents
+    
     func configureViewComponents(){
         
-
-//        topContainerView.backgroundColor = .blue
         addSubview(topContainerView)
         topContainerView.translatesAutoresizingMaskIntoConstraints = false
         topContainerView.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -87,8 +106,6 @@ class DiceView: UIView {
         logoImage.widthAnchor.constraint(equalToConstant: 200).isActive = true
         logoImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
-        
-//        centerContainerView.backgroundColor = .green
         addSubview(centerContainerView)
         centerContainerView.translatesAutoresizingMaskIntoConstraints = false
         centerContainerView.topAnchor.constraint(equalTo: topContainerView.bottomAnchor).isActive = true
@@ -108,19 +125,16 @@ class DiceView: UIView {
         
         firstDiceImage.widthAnchor.constraint(equalToConstant: 100).isActive = true
         firstDiceImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
-
+        
         secondDiceImage.widthAnchor.constraint(equalToConstant: 100).isActive = true
         secondDiceImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
-
-//        bottomContainerView.backgroundColor = .yellow
         addSubview(bottomContainerView)
         bottomContainerView.translatesAutoresizingMaskIntoConstraints = false
         bottomContainerView.topAnchor.constraint(equalTo: centerContainerView.bottomAnchor).isActive = true
         bottomContainerView.leadingAnchor.constraint(equalTo: leadingAnchor).isActive = true
         bottomContainerView.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         bottomContainerView.heightAnchor.constraint(equalTo: heightAnchor, multiplier: 0.33).isActive = true
-        
         
         bottomContainerView.addSubview(rollButton)
         rollButton.translatesAutoresizingMaskIntoConstraints = false
