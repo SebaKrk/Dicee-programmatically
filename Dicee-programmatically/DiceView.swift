@@ -51,7 +51,10 @@ class DiceView: UIView {
     
     @objc func handleButton() {
         print("Roll")
-      
+        let diceArray = [#imageLiteral(resourceName: "dice1"),#imageLiteral(resourceName: "dice2"),#imageLiteral(resourceName: "dice3"),#imageLiteral(resourceName: "dice4"),#imageLiteral(resourceName: "dice5"),#imageLiteral(resourceName: "dice6")]
+        
+        firstDiceImage.image = diceArray.randomElement()
+        secondDiceImage.image = diceArray.randomElement()
     }
     
 //    MARK: INIT
