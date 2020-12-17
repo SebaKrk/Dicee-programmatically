@@ -8,30 +8,30 @@
 import UIKit
 
 class DiceView: UIView {
-    
+
     let topContainerView = UIView()
     let centerContainerView = UIView()
     let bottomContainerView = UIView()
     
-    let logoImage : UIImageView = {
-        let image = UIImageView()
-        image.backgroundColor = .white
+    var logoImage : UIImageView = {
+        let image = UIImageView(image: #imageLiteral(resourceName: "diceeLogo"))
+//        image.backgroundColor = .white
         image.contentMode = .scaleAspectFit
         
         return image
     }()
     
     let firstDiceImage : UIImageView = {
-        let image = UIImageView()
-        image.backgroundColor = .red
+        let image = UIImageView(image: #imageLiteral(resourceName: "dice1"))
+//        image.backgroundColor = .red
         image.contentMode = .scaleAspectFit
         
         return image
     }()
     
     let secondDiceImage : UIImageView = {
-        let image = UIImageView()
-        image.backgroundColor = .blue
+        let image = UIImageView(image: #imageLiteral(resourceName: "dice2"))
+//        image.backgroundColor = .blue
         image.contentMode = .scaleAspectFit
         
         return image
@@ -39,7 +39,10 @@ class DiceView: UIView {
     
     let rollButton : UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .white
+        button.setTitle("ROOL", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.backgroundColor = UIColor(red: 120/255, green: 31/255, blue: 21/255, alpha: 1)
+        button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(handleButton), for: .touchUpInside)
         return button
     }()
@@ -48,10 +51,10 @@ class DiceView: UIView {
     
     @objc func handleButton() {
         print("Roll")
+      
     }
     
-    
-    
+//    MARK: INIT
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -66,7 +69,7 @@ class DiceView: UIView {
     func configureViewComponents(){
         
 
-        topContainerView.backgroundColor = .blue
+//        topContainerView.backgroundColor = .blue
         addSubview(topContainerView)
         topContainerView.translatesAutoresizingMaskIntoConstraints = false
         topContainerView.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -82,7 +85,7 @@ class DiceView: UIView {
         logoImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
         
-        centerContainerView.backgroundColor = .green
+//        centerContainerView.backgroundColor = .green
         addSubview(centerContainerView)
         centerContainerView.translatesAutoresizingMaskIntoConstraints = false
         centerContainerView.topAnchor.constraint(equalTo: topContainerView.bottomAnchor).isActive = true
@@ -107,7 +110,7 @@ class DiceView: UIView {
         secondDiceImage.heightAnchor.constraint(equalToConstant: 100).isActive = true
         
 
-        bottomContainerView.backgroundColor = .yellow
+//        bottomContainerView.backgroundColor = .yellow
         addSubview(bottomContainerView)
         bottomContainerView.translatesAutoresizingMaskIntoConstraints = false
         bottomContainerView.topAnchor.constraint(equalTo: centerContainerView.bottomAnchor).isActive = true
@@ -122,10 +125,6 @@ class DiceView: UIView {
         rollButton.centerXAnchor.constraint(equalTo: bottomContainerView.centerXAnchor).isActive = true
         rollButton.widthAnchor.constraint(equalToConstant: 150).isActive = true
         rollButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        
-
-        
-        
         
         
     }
