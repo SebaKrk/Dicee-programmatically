@@ -82,7 +82,7 @@ class DiceView: UIView {
     
     func playSound() {
         let sound = "DiceRoll"
-        let url = Bundle.main.url(forResource: sound, withExtension: "mp3")
+        let url = Bundle.main.url(forResource: sound, withExtension: "wav")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
     }

@@ -7,17 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		93232C80258B5CB6007CFB2B /* DiceRoll.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 93232C7F258B5CB6007CFB2B /* DiceRoll.mp3 */; };
+		935EF6AF25986FBE008FB34A /* DiceRoll.wav in Resources */ = {isa = PBXBuildFile; fileRef = 935EF6AE25986FBE008FB34A /* DiceRoll.wav */; };
 		936F9E632589F58C007C0D44 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936F9E622589F58C007C0D44 /* AppDelegate.swift */; };
 		936F9E652589F58C007C0D44 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936F9E642589F58C007C0D44 /* SceneDelegate.swift */; };
 		936F9E6C2589F58E007C0D44 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 936F9E6B2589F58E007C0D44 /* Assets.xcassets */; };
 		936F9E6F2589F58E007C0D44 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 936F9E6D2589F58E007C0D44 /* LaunchScreen.storyboard */; };
 		936F9E782589F65B007C0D44 /* DiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936F9E772589F65B007C0D44 /* DiceViewController.swift */; };
 		936F9E7E2589F91E007C0D44 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936F9E7D2589F91E007C0D44 /* DiceView.swift */; };
+		9674D15409DF27076F0C2D1D /* Pods_Dicee_programmatically.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FCAD85ED42ED6859590D12FE /* Pods_Dicee_programmatically.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		93232C7F258B5CB6007CFB2B /* DiceRoll.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = DiceRoll.mp3; path = "../../../../../../Library/Mobile Documents/com~apple~CloudDocs/.Trash/DiceRoll.mp3"; sourceTree = "<group>"; };
+		0A58D586F2BE588C358B6834 /* Pods-Dicee-programmatically.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dicee-programmatically.debug.xcconfig"; path = "Target Support Files/Pods-Dicee-programmatically/Pods-Dicee-programmatically.debug.xcconfig"; sourceTree = "<group>"; };
+		935EF6AE25986FBE008FB34A /* DiceRoll.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = DiceRoll.wav; path = ../../../Muzyka/DiceRoll.wav; sourceTree = "<group>"; };
 		936F9E5F2589F58C007C0D44 /* Dicee-programmatically.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Dicee-programmatically.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		936F9E622589F58C007C0D44 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		936F9E642589F58C007C0D44 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		936F9E702589F58E007C0D44 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		936F9E772589F65B007C0D44 /* DiceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceViewController.swift; sourceTree = "<group>"; };
 		936F9E7D2589F91E007C0D44 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
+		C4EC5BD77F5AD063C8E58CEA /* Pods-Dicee-programmatically.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dicee-programmatically.release.xcconfig"; path = "Target Support Files/Pods-Dicee-programmatically/Pods-Dicee-programmatically.release.xcconfig"; sourceTree = "<group>"; };
+		FCAD85ED42ED6859590D12FE /* Pods_Dicee_programmatically.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Dicee_programmatically.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9674D15409DF27076F0C2D1D /* Pods_Dicee_programmatically.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		270BA095E720C9D557DE094D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FCAD85ED42ED6859590D12FE /* Pods_Dicee_programmatically.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		936F9E562589F58C007C0D44 = {
 			isa = PBXGroup;
 			children = (
 				936F9E612589F58C007C0D44 /* Dicee-programmatically */,
 				936F9E602589F58C007C0D44 /* Products */,
+				DCB79FAF5814DAD108E0A97B /* Pods */,
+				270BA095E720C9D557DE094D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,9 +80,19 @@
 				936F9E6B2589F58E007C0D44 /* Assets.xcassets */,
 				936F9E6D2589F58E007C0D44 /* LaunchScreen.storyboard */,
 				936F9E702589F58E007C0D44 /* Info.plist */,
-				93232C7F258B5CB6007CFB2B /* DiceRoll.mp3 */,
+				935EF6AE25986FBE008FB34A /* DiceRoll.wav */,
 			);
 			path = "Dicee-programmatically";
+			sourceTree = "<group>";
+		};
+		DCB79FAF5814DAD108E0A97B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A58D586F2BE588C358B6834 /* Pods-Dicee-programmatically.debug.xcconfig */,
+				C4EC5BD77F5AD063C8E58CEA /* Pods-Dicee-programmatically.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 936F9E732589F58E007C0D44 /* Build configuration list for PBXNativeTarget "Dicee-programmatically" */;
 			buildPhases = (
+				7FE942582B87082BEBF2B0D2 /* [CP] Check Pods Manifest.lock */,
 				936F9E5B2589F58C007C0D44 /* Sources */,
 				936F9E5C2589F58C007C0D44 /* Frameworks */,
 				936F9E5D2589F58C007C0D44 /* Resources */,
+				0A97392A5E8B23C41B6FAE2E /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,11 +156,53 @@
 			files = (
 				936F9E6F2589F58E007C0D44 /* LaunchScreen.storyboard in Resources */,
 				936F9E6C2589F58E007C0D44 /* Assets.xcassets in Resources */,
-				93232C80258B5CB6007CFB2B /* DiceRoll.mp3 in Resources */,
+				935EF6AF25986FBE008FB34A /* DiceRoll.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0A97392A5E8B23C41B6FAE2E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dicee-programmatically/Pods-Dicee-programmatically-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Dicee-programmatically/Pods-Dicee-programmatically-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Dicee-programmatically/Pods-Dicee-programmatically-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FE942582B87082BEBF2B0D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Dicee-programmatically-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		936F9E5B2589F58C007C0D44 /* Sources */ = {
@@ -279,6 +348,7 @@
 		};
 		936F9E742589F58E007C0D44 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A58D586F2BE588C358B6834 /* Pods-Dicee-programmatically.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -298,6 +368,7 @@
 		};
 		936F9E752589F58E007C0D44 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4EC5BD77F5AD063C8E58CEA /* Pods-Dicee-programmatically.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
