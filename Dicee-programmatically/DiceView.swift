@@ -7,6 +7,7 @@
 
 import UIKit
 import AVFoundation
+import Instructions
 
 class DiceView: UIView {
     
@@ -23,7 +24,7 @@ class DiceView: UIView {
         return image
     }()
     
-    let firstDiceImage : UIImageView = {
+    var firstDiceImage : UIImageView = {
         let image = UIImageView(image: #imageLiteral(resourceName: "dice1"))
         image.contentMode = .scaleAspectFit
         
@@ -63,7 +64,7 @@ class DiceView: UIView {
             self.firstDiceImage.image = diceArray.randomElement()
             self.secondDiceImage.image = diceArray.randomElement()
         }
-       
+        
     }
     
     //    MARK: INIT
@@ -72,7 +73,6 @@ class DiceView: UIView {
         super.init(frame: frame)
         
         configureViewComponents()
-        
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
