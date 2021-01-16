@@ -1,3 +1,3 @@
 # Dicee-programmatically
 
-![DiceeApp](DiceeApp.png)
+![diceeApp](diceeApp.png.png)
