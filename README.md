@@ -1,4 +1,3 @@
 # Dicee-programmatically
 
-
-![diceeApp.png](diceeApp.png)
+<img src="diceeApp.png" width="300" height="600" >
